@@ -20,7 +20,7 @@ function getLatestStories(text){
 
     //Error handling if not slice-out
     if(start == -1 || end == -1){
-        return [{"error":"Notable to read "+ timeUrl +" webpage."}];
+        return [{"error":"Not able to read "+ timeUrl +" webpage."}];
     }
 
     let count = 0;
@@ -52,7 +52,7 @@ function getLatestStories(text){
         }
     } 
     catch(err){
-        return [{"error":"Notable to parse " + timeUrl + " webpage."}];
+        return [{"error":"Not able to parse " + timeUrl + " webpage."}];
     }
     return JSON.stringify(stories);
 }
